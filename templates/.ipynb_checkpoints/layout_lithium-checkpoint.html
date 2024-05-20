@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HANCOCK PROSPECTING{% endblock %}</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-white text-2xl">
+            HANCOCK PROSPECTING
+            <span class="font-bold" style="color: gold;">AI Tools</span> <!-- AI Tools added right next to the main text in gold color -->
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container mx-auto py-8 px-4 flex">
+        {% block sidebar %}
+            <!-- Sidebar menu -->
+            <div class="w-1/6 bg-gray-200 h-screen p-4">
+                <ul class="space-y-1">
+                    <li><a href="/" class="block px-2 py-1 rounded-md hover:bg-gray-300">Home</a></li>
+                    <li><a href="/companies" class="block px-2 py-1 rounded-md hover:bg-gray-300">Companies</a></li>
+                    <li><a href="/lithium-markets" class="block px-2 py-1 rounded-md hover:bg-gray-300">Lithium Markets</a></li>
+                    <li><a href="/reports" class="block px-2 py-1 rounded-md hover:bg-gray-300">Reports</a></li>
+                    <li><a href="/lithium-gpt" class="block px-2 py-1 rounded-md hover:bg-gray-300">LithiumGPT</a></li>
+                </ul>
+                <!-- Search bar -->
+                <div class="mt-8">
+                    <input type="text" placeholder="Search" class="w-full border rounded-md py-2 px-3">
+                </div>
+            </div>
+        {% endblock %}
+
+        <!--

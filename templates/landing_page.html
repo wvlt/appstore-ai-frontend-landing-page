@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HANCOCK PROSPECTING{% endblock %}</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl">
+                HANCOCK PROSPECTING
+                <span class="font-bold" style="color: gold;">AI Tools</span> <!-- AI Tools added right next to the main text in gold color -->
+            </h1>
+            <!-- Other navbar links or elements if needed -->
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container mx-auto py-12">
+        <div class="flex justify-center mt-8 flex-wrap">
+            <!-- AI-Based Applications -->
+            <!-- Application 1: Sentiment Analysis -->
+            <div class="m-4 p-4 bg-white rounded-lg shadow-lg flex items-center w-80 h-40">
+                <a href="/sentiment-analysis" class="flex w-full h-full items-center"> <!-- Updated href to point to commodity investment -->
+                    <img src="/static/icon_sentiment_analysis.jpg" alt="Sentiment Analysis" class="w-auto h-24 mr-4">
+                    <span class="text-xl font-semibold">Sentiment Analysis</span>
+                </a>
+            </div>
+            <!-- Application 2: Commodity Investment -->
+            <div class="m-4 p-4 bg-white rounded-lg shadow-lg flex items-center w-80 h-40">
+                <a href="/lithium-investment" class="flex w-full h-full items-center">
+                    <img src="/static/icon_commodity_investment.jpg" alt="Lithium Investment" class="w-auto h-24 mr-4">
+                    <span class="text-xl font-semibold">Lithium Investment</span>
+                </a>
+            </div>
+            <!-- Application 3: HancockGPT -->
+            <div class="m-4 p-4 bg-white rounded-lg shadow-lg flex items-center w-80 h-40">
+                <a href="/hancock-gpt" class="flex w-full h-full items-center">  <!-- Update the href to point to the HancockGPT route -->
+                    <img src="/static/icon_hancockgpt.jpg" alt="HancockGPT" class="w-auto h-24 mr-4">
+                    <span class="text-xl font-semibold">HancockGPT</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

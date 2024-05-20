@@ -1,0 +1,25 @@
+{% extends "layout_lithium.html" %}
+
+{% block content %}
+<div class="container mx-auto py-8 px-4">
+    <!-- Content specific to Lithium Markets page -->
+    <h1 class="text-3xl font-semibold mb-4">Lithium Markets</h1>
+    
+    <!-- Add your main content here, such as text, images, etc. -->
+    
+    <!-- Plot area -->
+    <div id="plot"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<!-- Additional scripts specific to Lithium Markets page -->
+<script>
+    // Parse JSON data for plots
+    var plotsData = {{ plots_json | safe }};
+    
+    // Render the plot using Plotly
+    Plotly.newPlot('plot', plotsData.data, plotsData.layout);
+</script>
+{% endblock %}
